@@ -17,5 +17,13 @@ In order to remove the driver from your system open a terminal in the directory 
 ```
 sudo ./dkms-remove.sh
 ```
-
-
+## Note
+For Ubuntu 17.04 add the following lines
+```
+[device]
+wifi.scan-rand-mac-address=no
+```
+at the end of file /etc/NetworkManager/NetworkManager.conf and restart NetworkManager with the command:
+```
+sudo service NetworkManager restart
+```
